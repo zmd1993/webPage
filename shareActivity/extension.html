@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html >
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	    <meta name="viewport"
+	          content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no,minimal-ui">
+	    <meta name="format-detection" content="telephone=no" searchtype="map">
+	    <script type="text/javascript" src="jquery-3.1.1.min.js"></script>
+	    <script type="text/javascript" src="qrcode.js"></script>
+	    <link rel="stylesheet" href="extension.css" />
+	    <script type="text/javascript" src="config.js" ></script>
+	    <link rel="stylesheet" href="html2canvas/canvas.css" />
+		<title>推广活动</title>
+	</head>
+	<body >
+		<audio autoplay="autoplay" loop="loop"  src="http://www.hzmvip.com/audio/victory.mp3" id="audio"></audio>
+		<div class="music-out">
+			<div class=" play-border">
+				<img class="play" id="controller" src="img/music.png" />
+			</div>
+		</div>
+		<div class="kf" id="all">
+			<div class="item">
+				<img src="img/money.png" />
+			</div>
+			<div class="item">
+				<img src="img/order.png" />
+			</div>
+			<div class="item">
+				<img src="img/partner.png" />
+			</div>
+			<div class="item" onclick="hiddenThis()">
+				<img src="img/right.png" />
+			</div>
+		</div>
+		<div class="kf hidden" id="showMore" style="top: 326px;">
+			<div class="item" onclick="showThis()">
+				<img style="transform: rotate(180deg);" src="img/right.png" />
+			</div>
+		</div>
+		<div class="top-image-box">
+			<img src="img/top.jpg" />
+			<!--<div class="top-image-box-inside" id="danmuBox">
+				
+			</div>-->
+		</div>
+		<div class="body">
+			<!--<img class="body-image" src="img/background.png" />-->
+			<div class="body-container">
+				<!--<img class="body-image-bottom" src="img/background.png" />-->
+				<!--活动倒计时-->
+				<div  class="box interested" id="item1" style="margin-top: 10px;">
+					<div class="box-inside">
+						<div class="container" id="countDown">
+							<div class="title">活动限额数量<span>100</span>份</div>
+							<div class="progress">
+								<div class="progress-inside">
+									<!--<div class="percent" style="width: 50%;"></div>-->
+									<div class="percent-min" style="width: 2%;"></div>
+									<div class="percent-number">2%</div>
+								</div>
+							</div>
+							<div class="footer">
+								<span>已抢购<span class="span-red">600</span>人</span>
+								<span>仅剩<span class="span-red">19</span>份</span>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!--倒计时-->
+				<div  class="box interested" id="item1" style="margin-top: 20px;">
+					<div class="box-inside">
+						<div class="container" id="countDown">
+							<div class="title">已有<span>81</span>人购买</div>
+							<div class="countDown-outtime" style="display: none;" >抱歉~该活动已经结束了</div>
+							<div class="countDown-out">
+								<div class="cd-title">距离活动结束</div>
+								<div class="countDown">
+									<div class="time">
+										<div class="num" id="day">0</div>
+									</div>
+									<div class="text">天</div>
+									<div class="time">
+										<div class="num" id="hour">0</div>
+									</div>
+									<div class="text">时</div>
+									<div class="time">
+										<div class="num" id="minute">0</div>
+									</div>
+									<div class="text">分</div>
+									<div class="time">
+										<div class="num" id="second">0</div>
+									</div>
+									<div class="text" >秒</div>
+								</div>
+							</div>
+							<div class="footer">
+								<span>浏览人数:<span class="span-red">600</span>人</span>
+								<span>转发次数:<span class="span-red">19</span></span>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!--感兴趣-->
+				<div  class="box interested" id="item1" style="margin-top: 50px;">
+					<div class="box-inside">
+						<div class="fixed-top">已有86人对豪礼感兴趣</div>
+						<div class="container">
+							<div class="container-ins">
+								<div class="person">
+									<img src="../img/tx.jpg" />
+									<div class="person-name">郭萌萌</div>
+								</div>
+								<div class="person">
+									<img src="../img/tx.jpg" />
+									<div class="person-name">郭萌萌</div>
+								</div>
+								<div class="person">
+									<img src="../img/tx.jpg" />
+									<div class="person-name">郭萌萌</div>
+								</div>
+								<div class="person">
+									<img src="../img/tx.jpg" />
+									<div class="person-name">郭萌萌</div>
+								</div>
+								<div class="person">
+									<img src="../img/tx.jpg" />
+									<div class="person-name">郭萌萌</div>
+								</div>
+								<div class="person">
+									<img src="../img/tx.jpg" />
+									<div class="person-name">郭萌萌</div>
+								</div>
+								<div class="person">
+									<img src="../img/tx.jpg" />
+									<div class="person-name">郭萌萌</div>
+								</div>
+								<div class="person">
+									<img src="../img/tx.jpg" />
+									<div class="person-name">郭萌萌</div>
+								</div>
+								<div class="person">
+									<img src="../img/tx.jpg" />
+									<div class="person-name">郭萌萌</div>
+								</div>
+								<div class="person">
+									<img src="../img/tx.jpg" />
+									<div class="person-name">郭萌萌</div>
+								</div>
+							</div>
+							<div class="loadMore" onclick="loadMore()">
+								<img src="img/bottom.png" />
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				
+				<!--排行榜-->
+				<div  class="box interested" id="item1" style="margin-top: 50px;">
+					<div class="box-inside">
+						<div class="fixed-top">排行榜TOP20</div>
+						<div class="container" style="padding-bottom: 20px;">
+							<div class="top-list" style="height: 40px;">
+								<div class="top-list-title">排行</div>
+								<div class="right">
+									<div class="line">
+										<div class="top-list-name">用户名</div>
+										
+									</div>
+									<div class="line">
+										<div class="top-list-money">获得赏金</div>
+									</div>
+									
+								</div>
+							</div>
+							<div id="rankList">
+								
+							</div>
+							<div class="loadMore" onclick="loadMore()">
+								<img src="img/bottom.png" />
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				<!--活动介绍-->
+				<div  class="interested" id="item4" >
+					<div class="container"  style="padding-bottom:0px;">
+						<div class="title">活动介绍</div>
+						<img style="width: 100%;" src="img/pro-detail.jpg" />
+					</div>
+				</div>
+				<!--温馨提示-->
+				<div  class="box interested" id="item1" style="margin-top: 50px;">
+					<div class="box-inside">
+						<div class="fixed-top">温馨提示</div>
+						<div class="content">
+							<div class="c-text">购买须知:</div>
+							<div class="c-text">1.参加本次活动须线上付款，凭订单页面到店使用；</div>
+							<div class="c-text">2.到店护理需至少提前2小时电话预约。</div>
+							<div class="c-text">3.本次活动由<a>跃年轻有限公司</a>发起，我们将为您提供优质的服务；</div>
+							<div class="c-text">4.体验特惠活动时间:6月18日~6月25日。</div>
+							<div class="c-text" style="margin-top:20px;">返利规则：</div>
+							<div class="c-text">将您的专属链接分享给好友，好友购买之后，你将获得奖励。购买的好友越多，您的收益越多。好友购物后，您的奖励可以在个人中心里面进行提现。您(A)与您的朋友(B)将各自的链接发给了共同好友(C),如C先打开的是B发来的活动链接，那么C推荐为B。以此类推。</div>
+							<div class="concat-way">
+								<div class="image-box">
+									<img src="../img/tx.jpg" />
+								</div>
+								<div class="concat-us">
+									<img src="img/concat.png" />
+									<span>17656987856</span>
+								</div>
+								<div class="address">地址：浙江省杭州市余杭区仓前街道杭师大科技园E706</div>
+							</div>
+							
+						</div>
+					</div>
+				</div>
+				<!--购买列表-->
+				<div  class="box interested" id="item1" style="margin-top: 50px;">
+					<div class="box-inside">
+						<div class="fixed-top">购买列表</div>
+						<div class="container" >
+							<div class="items-title">
+								<span>用户名</span>
+								<span class="phone">手机号</span>
+								<span>状态</span>
+							</div>
+							<div class="buy-list newBuyList" id="buyList">
+								
+							</div>
+							<div class="buyListLoading" >
+								
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="contact-us">我是商家，我也要创建活动</div> 
+			<!--bottom-->
+			<div class="logo">
+				<img src="img/logo.png" />
+				<span>本活动平台由杭州跃年轻有限公司提供技术支持</span>
+			</div>
+			<div class="bottom-float"></div>
+			</div>
+		</div>
+			
+		<div class="bottom-fixed">
+			<div class="col-20">
+				<img src="img/bottom_kf.png" />
+				<span>客服</span>
+			</div>
+			<div class="col-40 share" onclick="showPoster()">分享赚钱</div>
+			<div class="col-40 reverse" onclick="login()"> 立即购买</div>
+			
+		</div>
+		<!--分享海报-->
+		<div class="mask hidden" id="poster" onclick="hiddenPoster()">
+			<img class="poster-img" id="posterImage" src="" />
+		</div>
+		
+		<canvas id="canvas" style="position: fixed;left: 1000px;" width="500px" height="879px"></canvas>
+		
+		<!--弹出提示-->
+		<div id="eject">
+			
+		</div>
+		<!-- 返回顶部 -->
+		<a href="javascript:scrollTo(0,0);" class="back-top hidden" id="backTop" >
+			<img src="http://www.hzmvip.com/images/groupBuy/icons/back_top.png"/>
+		</a>
+		<div hidden="hidden" id="qrcode" style="width:200px; height:200px;"></div>
+		<div class="login-mask out" id="loginMask" onclick="hiddenLoginModal()">
+			<div class="login-modal" id="loginModal" >
+				<div class="title">注册/登录</div>
+				<div class="input-box">
+					<input placeholder="请输入手机号" />
+				</div>
+				<div class="input-box">
+					<input placeholder="请输入验证码"  style="width: 150px;"/>
+					<div class="get-code" id="verificationCode">获取验证码</div>
+				</div>
+				<div class="login-submit">登录</div>
+			</div>
+		</div>
+		<!--奖品框-->
+		<img class="prize-box cake" src="img/prize_box.png" onclick="openPrizeMask()" />
+		<div class="prizeMask none" id="prizeMask" onclick="closePrizeMask()">
+			<div class="p-modal" id="prizeModal" onclick="preventPageMove()">
+				<div class="p-modal-title">奖品详情</div>
+				<div class="container" touchmove="preventDefault()">
+					<div class="item">
+						<img class="ser-picture" src="http://hzm-86205788-test.oss-cn-hangzhou.aliyuncs.com/admin/1559798494632.png" />
+						<div class="right">
+							<div class="ser-name">卡芙奇石墨烯亮肤面膜净化毛孔 补水保湿 提亮润泽 抗氧活肤修护</div>
+							<div class="title">一等奖</div>
+						</div>
+					</div>
+					<div class="item">
+						<img class="ser-picture" src="http://hzm-86205788-test.oss-cn-hangzhou.aliyuncs.com/admin/1559798494632.png" />
+						<div class="right">
+							<div class="ser-name">卡芙奇石墨烯亮肤面膜</div>
+							<div class="title">二等奖</div>
+						</div>
+					</div>
+					<div class="item">
+						<img class="ser-picture" src="http://hzm-86205788-test.oss-cn-hangzhou.aliyuncs.com/admin/1559798494632.png" />
+						<div class="right">
+							<div class="ser-name">卡芙奇石墨烯亮肤面膜净化毛孔 补水保湿 提亮润泽 抗氧活肤修护</div>
+							<div class="title">三等奖</div>
+						</div>
+					</div>
+					<div class="item">
+						<img class="ser-picture" src="http://hzm-86205788-test.oss-cn-hangzhou.aliyuncs.com/admin/1559798494632.png" />
+						<div class="right">
+							<div class="ser-name">卡芙奇石墨烯亮肤面膜净化毛孔 补水保湿 提亮润泽 抗氧活肤修护</div>
+							<div class="title">四等奖</div>
+						</div>
+					</div>
+					<div class="item">
+						<img class="ser-picture" src="http://hzm-86205788-test.oss-cn-hangzhou.aliyuncs.com/admin/1559798494632.png" />
+						<div class="right">
+							<div class="ser-name">卡芙奇石墨烯亮肤面膜净化毛孔 补水保湿 提亮润泽 抗氧活肤修护</div>
+							<div class="title">五等奖</div>
+						</div>
+					</div>
+					<div class="item">
+						<img class="ser-picture" src="http://hzm-86205788-test.oss-cn-hangzhou.aliyuncs.com/admin/1559798494632.png" />
+						<div class="right">
+							<div class="ser-name">卡芙奇石墨烯亮肤面膜净化毛孔 补水保湿 提亮润泽 抗氧活肤修护</div>
+							<div class="title">六等奖</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+	
+	
+	<script type="text/javascript" src="extension.js" ></script>
+	<script type="text/javascript" src="html2canvas/html2canvas.js" ></script>
+	<script type="text/javascript" src="html2canvas/canvas.js" ></script>
+	<script>
+		function closePrizeMask(){
+			var classVal = document.getElementById("prizeMask").getAttribute("class");
+			classVal = classVal.concat(' none')
+			document.getElementById("prizeMask").setAttribute('class',classVal);
+			document.body.style.position="absolute";
+		}
+		function openPrizeMask(){
+			var classVal = document.getElementById("prizeMask").getAttribute("class");
+			console.log(classVal)
+			classVal = classVal.replace('none','')
+			document.getElementById("prizeMask").setAttribute('class',classVal);
+			document.body.style.position="fixed";
+		}
+		function preventPageMove(e){
+			var ev = e || window.event;
+			if(ev && ev.stopPropagation) {
+			    ev.stopPropagation();
+			} else {
+			    ev.cancelBubble = true;
+			}
+		}
+		function preventDefault(e){
+			e.preventDefault()
+		}
+		var parameter = {
+			title:'双十一29.9元抢购价值1298元礼包！深层清洁+深度补水。',
+			coverImage:'img/serImage.jpg',
+			userName:'lil',
+			userPhoto:'img/serImage.jpg',
+			sale:'308',
+			qrCode:'img/code.png',
+			price:'29.9'
+		}
+		canvasToImage(parameter)
+	 	function showPoster(){	
+		 	showShareImage()
+		 }
+	</script>
+</html>
